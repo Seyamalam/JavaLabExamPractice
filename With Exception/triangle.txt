@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class TriangleArea {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("base: ");
+            double base = scanner.nextDouble();
+            System.out.print("height: ");
+            double height = scanner.nextDouble();
+            if (base < 0 || height < 0) throw new IllegalArgumentException("Base and height cannot be negative.");
+            double area = 0.5 * base * height;
+            System.out.println("area: " + area);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}

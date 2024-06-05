@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class LinearSearch {
+    public static int linearSearch(int[] array, int target) throws Exception {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) {
+                return i;
+            }
+        }
+        throw new Exception("Element not found");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("Enter the number of elements: ");
+            int n = scanner.nextInt();
+            if (n <= 0) throw new IllegalArgumentException("Number of elements must be positive.");
+            int[] array = new int[n];
+
+            System.out.println("Enter the elements: ");
+            for (int i = 0; i < n; i++) {
+                array[i] = scanner.nextInt();
+            }
+
+            System.out.print("Enter the target value: ");
+            int target = scanner.nextInt();
+
+            int result = linearSearch(array, target);
+            System.out.println("Element found at index: " + result);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}

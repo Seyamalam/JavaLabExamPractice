@@ -1,0 +1,45 @@
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) throws IllegalArgumentException {
+        if (age < 0) throw new IllegalArgumentException("Age cannot be negative.");
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+class Student extends Person {
+    private String studentId;
+
+    public Student(String name, int age, String studentId) throws IllegalArgumentException {
+        super(name, age);
+        if (studentId == null || studentId.isEmpty()) throw new IllegalArgumentException("Student ID cannot be null or empty.");
+        this.studentId = studentId;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        try {
+            Student student = new Student("John Doe", 20, "S12345");
+            System.out.println("Student Name: " + student.getName());
+            System.out.println("Student Age: " + student.getAge());
+            System.out.println("Student ID: " + student.getStudentId());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}

@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class ToUpperCase {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("Enter a string: ");
+            String input = scanner.nextLine();
+            String upperCaseString = input.toUpperCase();
+            System.out.println("Uppercase: " + upperCaseString);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}

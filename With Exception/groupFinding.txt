@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class GroupFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("Enter a character (A, B, C, or D): ");
+            char group = scanner.next().charAt(0);
+
+            switch (group) {
+                case 'A':
+                    System.out.println("You belong to the Science group.");
+                    break;
+                case 'B':
+                    System.out.println("You belong to the Commerce group.");
+                    break;
+                case 'C':
+                    System.out.println("You belong to the Arts group.");
+                    break;
+                case 'D':
+                    System.out.println("You belong to the Sports group.");
+                    break;
+                default:
+                    throw new IllegalArgumentException("Invalid group");
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
