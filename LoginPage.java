@@ -9,7 +9,7 @@ import java.awt.event.ItemListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class loginPage extends JFrame {
+public class LoginPage extends JFrame {
     Container c = getContentPane();
     JLabel L1, L2;
     JTextField f1, f2;
@@ -17,7 +17,7 @@ public class loginPage extends JFrame {
     JCheckBox jb1, jb2;
     JRadioButton r1, r2, r3;
 
-    public loginPage() {
+    public LoginPage() {
         L1 = new JLabel("Name");
         L1.addMouseListener(new MouseHandler());
 
@@ -57,7 +57,7 @@ public class loginPage extends JFrame {
     }
 
     public static void main(String[] args) {
-        new loginPage();
+        new LoginPage();
     }
 
     private class LoginHandler implements ActionListener {

@@ -2,7 +2,7 @@ package com.javalab.firstproject;
 
 import java.util.Scanner;
 
-public class fibonacchi {
+public class Fibonacchi {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of terms: ");
